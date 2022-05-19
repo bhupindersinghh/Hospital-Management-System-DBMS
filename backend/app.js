@@ -1,8 +1,6 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
-//Logger that was used for debugging, commented later
-// var logger = require('morgan');
 var mysql = require('mysql');
 var cors = require('cors');
 var port = 3001
@@ -33,7 +31,6 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-// app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
